@@ -53,10 +53,10 @@
 .hero-photo { position: absolute; inset: 0; height: 100%; width: 100%; object-fit: cover; object-position: center 54%; z-index: -2; }
 .hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, var(--hero) 0%, color-mix(in oklch, var(--hero) 92%, transparent) 24%, transparent 73%); z-index: -1; }
 .hero-inner { height: 100%; display: flex; align-items: center; }
-.hero-copy { width: 570px; padding-bottom: 12px; }
+.hero-copy { width: 630px; padding-bottom: 12px; }
 .eyebrow { display: flex; align-items: center; gap: 9px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.8px; margin-bottom: 18px; }
 .hero .eyebrow { color: var(--primary); }
-.hero h1 { font-size: 54px; line-height: 1.13; font-weight: 800; margin: 0 0 20px; }
+.hero h1 { font-size: 43px; line-height: 1.13; font-weight: 800; margin: 0 0 20px; }
 .hero h1 span { color: var(--primary); }
 .hero-description { font-size: 14px; line-height: 1.9; max-width: 390px; color: color-mix(in oklch, var(--hero-foreground) 76%, transparent); }
 .hero-actions { display: flex; gap: 12px; margin-top: 27px; }
@@ -124,7 +124,7 @@
  .container-site { width: calc(100% - 36px); } .announcement { font-size: 9px; padding: 8px 10px; }
  .site-header { height: 72px; } .brand-name { font-size: 22px; } .brand-symbol { width: 31px; height: 36px; } .brand-caption { font-size: 7px; }
  .main-nav { display: none; } .main-nav.mobile-open { display: flex; flex-direction: column; align-items: stretch; position: absolute; top: 102px; left: 0; right: 0; z-index: 30; background: var(--background); padding: 15px 25px; gap: 0; border-bottom: 1px solid var(--border); box-shadow: var(--shadow-soft); } .main-nav a { padding: 14px 0; font-size: 13px; } .main-nav a.active::after { display: none; }
- .header-action { margin-left: auto; height: 35px; padding-inline: 12px; font-size: 10px; } .header-action svg { display: none; } .mobile-menu-trigger { display: inline-flex; width: 28px; padding: 0; } .header-inner { gap: 12px; }
+ .header-action { display: none; } .mobile-menu-trigger { display: inline-flex; width: 32px; padding: 0; flex-shrink: 0; margin-left: auto; } .header-inner { gap: 12px; }
  .hero { height: 530px; } .hero-photo { object-position: 66% bottom; height: 270px; inset: auto 0 0; object-fit: cover; } .hero::after { background: linear-gradient(180deg, var(--hero) 0%, var(--hero) 42%, transparent 80%); } .hero-inner { align-items: flex-start; padding-top: 31px; } .hero-copy { width: 100%; padding: 0; } .hero .eyebrow { font-size: 8px; letter-spacing: 1.2px; margin-bottom: 13px; } .hero h1 { font-size: 35px; margin-bottom: 13px; } .hero-description { font-size: 12px; line-height: 1.8; max-width: 310px; } .hero-actions { margin-top: 18px; gap: 9px; } .hero-actions a { height: 40px; font-size: 10px; padding-inline: 14px; } .hero-footnote { font-size: 8px; margin-top: 15px; } .hero-index { right: 20px; bottom: 16px; font-size: 8px; }
  .trust-inner { height: auto; grid-template-columns: 1fr 1fr; padding-block: 19px; gap: 20px 12px; } .trust-item, .trust-item:first-child { justify-content: flex-start; gap: 8px; border: 0; } .trust-item svg { width: 21px; height: 21px; } .trust-item strong { font-size: 9px; } .trust-item small { font-size: 8px; }
  .section { padding-block: 34px; } .section-title { font-size: 24px; } .section-description { font-size: 11px; margin-top: 8px; } .section-heading { margin-bottom: 23px; align-items: flex-start; } .section-heading > a { font-size: 9px; max-width: 80px; line-height: 1.6; margin-top: 5px; }
