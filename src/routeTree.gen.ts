@@ -10,33 +10,53 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ReparationRouteImport } from './routes/reparation'
+import { Route as ReprisesRouteImport } from './routes/reprises'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ReparationRoute = ReparationRouteImport.update({
+  id: '/reparation',
+  path: '/reparation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReprisesRoute = ReprisesRouteImport.update({
+  id: '/reprises',
+  path: '/reprises',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/reparation': typeof ReparationRoute
+  '/reprises': typeof ReprisesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/reparation': typeof ReparationRoute
+  '/reprises': typeof ReprisesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/reparation': typeof ReparationRoute
+  '/reprises': typeof ReprisesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/reparation' | '/reprises'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/reparation' | '/reprises'
+  id: '__root__' | '/' | '/reparation' | '/reprises'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ReparationRoute: typeof ReparationRoute
+  ReprisesRoute: typeof ReprisesRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +68,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/reparation': {
+      id: '/reparation'
+      path: '/reparation'
+      fullPath: '/reparation'
+      preLoaderRoute: typeof ReparationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reprises': {
+      id: '/reprises'
+      path: '/reprises'
+      fullPath: '/reprises'
+      preLoaderRoute: typeof ReprisesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ReparationRoute: ReparationRoute,
+  ReprisesRoute: ReprisesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
