@@ -18,10 +18,10 @@
 }
 :root {
  --background: oklch(1 0 0); --foreground: oklch(.24 .008 250); --card: oklch(1 0 0);
- --primary: oklch(.85 .15 86); --primary-foreground: oklch(.23 .014 75);
- --secondary: oklch(.97 .012 88); --muted: oklch(.97 .002 250); --muted-foreground: oklch(.52 .012 250);
+ --primary: oklch(.77 .14 230); --primary-foreground: oklch(.21 .04 250);
+ --secondary: oklch(.96 .025 235); --muted: oklch(.97 .002 250); --muted-foreground: oklch(.46 .012 250);
  --border: oklch(.9 .004 250); --destructive: oklch(.55 .19 25);
- --hero: oklch(.19 .005 250); --hero-foreground: oklch(.99 0 0); --hero-border: oklch(.65 .005 250);
+ --hero: oklch(.21 .045 250); --hero-foreground: oklch(.99 0 0); --hero-border: oklch(.65 .005 250);
  --success: oklch(.46 .12 158); --success-surface: oklch(.96 .025 158);
  --radius: 8px; --shadow-soft: 0 8px 32px oklch(.2 0 0 / .045);
 }
@@ -35,8 +35,21 @@
 }
 .container-site { width: min(1200px, calc(100% - 80px)); margin-inline: auto; }
 .announcement { background: var(--primary); color: var(--primary-foreground); text-align: center; font-size: 11px; padding: 9px 14px; font-weight: 600; }
-.site-header { height: 90px; background: var(--background); border-bottom: 1px solid var(--border); }
-.header-inner { height: 100%; display: flex; align-items: center; gap: 42px; }
+.contact-bar { background: var(--hero); color: var(--hero-foreground); }
+.contact-bar-inner { display: flex; align-items: center; gap: 28px; min-height: 39px; }
+.contact-bar a { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; }
+.contact-bar a:hover { color: var(--primary); }
+.contact-address { margin-left: auto; }
+.site-header { position: relative; height: 90px; background: var(--background); border-bottom: 1px solid var(--border); }
+.header-inner { height: 100%; display: flex; align-items: center; gap: 22px; }
+.quality-logo { width: 108px; height: 58px; object-fit: contain; flex-shrink: 0; }
+.footer-contact { display: flex; flex-direction: column; gap: 6px; font-size: 11px; color: var(--muted-foreground); }
+.workshop-band { border-top: 1px solid var(--border); background: var(--muted); }
+.workshop-inner { display: grid; grid-template-columns: 1.2fr 1fr; gap: 55px; align-items: center; }
+.workshop-details { display: grid; gap: 18px; font-size: 13px; }
+.workshop-details a { display: flex; align-items: center; gap: 12px; }
+.workshop-details svg { color: var(--muted-foreground); flex-shrink: 0; }
+.workshop-facts { display: flex; flex-wrap: wrap; gap: 20px; font-size: 11px; color: var(--muted-foreground); margin-top: 20px; }
 .brand { display: inline-flex; align-items: center; gap: 9px; color: var(--foreground); flex-shrink: 0; }
 .brand-symbol { width: 38px; height: 42px; color: var(--primary); }
 .brand-name { font-size: 25px; font-weight: 800; line-height: 1.15; }
@@ -122,8 +135,9 @@
 @media (max-width: 900px) { .container-site { width: calc(100% - 44px); } .header-inner { gap: 18px; } .main-nav { gap: 18px; } .main-nav a { font-size: 11px; } .header-action { padding-inline: 12px; } .hero h1 { font-size: 44px; } .hero-copy { width: 480px; } .device-grid { gap: 12px; } .device-card { padding: 18px 15px; } .device-card h3 { font-size: 15px; } .buyback-inner { gap: 20px; grid-template-columns: 75px 1fr; } .buyback-symbol { width: 70px; height: 70px; } .buyback-inner > a { grid-column: 2; width: fit-content; } }
 @media (max-width: 640px) {
  .container-site { width: calc(100% - 36px); } .announcement { font-size: 9px; padding: 8px 10px; }
- .site-header { height: 72px; } .brand-name { font-size: 22px; } .brand-symbol { width: 31px; height: 36px; } .brand-caption { font-size: 7px; }
- .main-nav { display: none; } .main-nav.mobile-open { display: flex; flex-direction: column; align-items: stretch; position: absolute; top: 102px; left: 0; right: 0; z-index: 30; background: var(--background); padding: 15px 25px; gap: 0; border-bottom: 1px solid var(--border); box-shadow: var(--shadow-soft); } .main-nav a { padding: 14px 0; font-size: 13px; } .main-nav a.active::after { display: none; }
+ .contact-bar-inner { gap: 5px 16px; min-height: 48px; justify-content: center; flex-wrap: wrap; padding-block: 8px; } .contact-bar a { font-size: 10px; gap: 5px; } .contact-address { display: none !important; }
+ .site-header { height: 78px; } .brand-name { font-size: 18px; } .brand-symbol { width: 31px; height: 36px; } .brand-caption { font-size: 7px; } .quality-logo { width: 85px; height: 49px; } .workshop-inner { grid-template-columns: 1fr; gap: 25px; }
+ .main-nav { display: none; } .main-nav.mobile-open { display: flex; flex-direction: column; align-items: stretch; position: absolute; top: 100%; left: 0; right: 0; z-index: 30; background: var(--background); padding: 15px 25px; gap: 0; border-bottom: 1px solid var(--border); box-shadow: var(--shadow-soft); } .main-nav a { padding: 14px 0; font-size: 13px; } .main-nav a.active::after { display: none; }
  .header-action { display: none; } .mobile-menu-trigger { display: inline-flex; width: 32px; padding: 0; flex-shrink: 0; margin-left: auto; } .header-inner { gap: 12px; }
  .hero { height: 530px; } .hero-photo { object-position: 66% bottom; height: 270px; inset: auto 0 0; object-fit: cover; } .hero::after { background: linear-gradient(180deg, var(--hero) 0%, var(--hero) 42%, transparent 80%); } .hero-inner { align-items: flex-start; padding-top: 31px; } .hero-copy { width: 100%; padding: 0; } .hero .eyebrow { font-size: 8px; letter-spacing: 1.2px; margin-bottom: 13px; } .hero h1 { font-size: 35px; margin-bottom: 13px; } .hero-description { font-size: 12px; line-height: 1.8; max-width: 310px; } .hero-actions { margin-top: 18px; gap: 9px; } .hero-actions a { height: 40px; font-size: 10px; padding-inline: 14px; } .hero-footnote { font-size: 8px; margin-top: 15px; } .hero-index { right: 20px; bottom: 16px; font-size: 8px; }
  .trust-inner { height: auto; grid-template-columns: 1fr 1fr; padding-block: 19px; gap: 20px 12px; } .trust-item, .trust-item:first-child { justify-content: flex-start; gap: 8px; border: 0; } .trust-item svg { width: 21px; height: 21px; } .trust-item strong { font-size: 9px; } .trust-item small { font-size: 8px; }
