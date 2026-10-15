@@ -1,3 +1,3 @@
 export function pageMeta(title: string, description: string) {
-  return { meta: [ { title: `${title} | Smile Repair` }, { name: 'description', content: description }, { property: 'og:title', content: `${title} | Smile Repair` }, { property: 'og:description', content: description }, { property: 'og:type', content: 'website' }, { name: 'twitter:card', content: 'summary_large_image' } ] };
+  return { meta: [ { title: `${title} | AMI Réparation Clichy` }, { name: 'description', content: description }, { property: 'og:title', content: `${title} | AMI Réparation Clichy` }, { property: 'og:description', content: description }, { property: 'og:type', content: 'website' }, { name: 'twitter:card', content: 'summary_large_image' } ] };
 }
