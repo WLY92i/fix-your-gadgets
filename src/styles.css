@@ -122,6 +122,23 @@
 .category-options { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 24px; }
 .device-button { height: 100px; flex-direction: column; gap: 13px; font-size: 11px; } .device-button svg { width: 32px; height: 32px; } .device-button[aria-pressed=true] { border-color: var(--primary); background: var(--secondary); }
 .form-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 21px; } .form-field { display: flex; flex-direction: column; gap: 8px; font-size: 12px; font-weight: 600; } .form-field.full { grid-column: 1 / -1; }
+.model-picker { margin-top: 25px; }
+.model-picker-heading { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.model-picker-heading h3 { margin: 0; font-size: 13px; font-weight: 700; }
+.model-picker-heading > span { font-size: 11px; color: var(--muted-foreground); }
+.model-search { display: flex; align-items: center; gap: 10px; border: 1px solid var(--border); border-radius: 5px; padding: 10px 12px; margin-bottom: 16px; color: var(--muted-foreground); }
+.model-search input { min-width: 0; width: 100%; border: 0; outline: none; font-size: 12px; color: var(--foreground); background: var(--background); }
+.model-search:focus-within { outline: 2px solid var(--primary); outline-offset: 2px; }
+.model-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; max-height: 410px; overflow-y: auto; padding: 2px; }
+.model-option { height: 185px; min-width: 0; padding: 12px; display: flex; flex-direction: column; gap: 10px; position: relative; white-space: normal; box-shadow: none; }
+.model-option[aria-pressed=true] { border-color: var(--primary); background: var(--secondary); }
+.model-image { height: 130px; width: 100%; display: grid; place-items: center; }
+.model-image img { width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply; }
+.model-name { font-size: 11px; font-weight: 600; text-align: center; line-height: 1.4; min-height: 30px; overflow-wrap: anywhere; }
+.model-selected { position: absolute; top: 8px; right: 8px; background: var(--primary); color: var(--primary-foreground); border-radius: 50%; width: 22px; height: 22px; display: grid; place-items: center; }
+.manual-model { font-size: 11px; margin-block: 10px; }
+.model-choice { display: flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 600; }
+@media (max-width: 640px) { .model-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-height: 380px; gap: 9px; } .model-option { height: 172px; } .model-image { height: 115px; } }
 .form-field input, .form-field select, .form-field textarea { width: 100%; background: var(--background); border: 1px solid var(--border); border-radius: 5px; padding: 12px 13px; color: var(--foreground); font-size: 12px; font-weight: 400; min-height: 44px; }
 .form-field textarea { min-height: 130px; resize: vertical; line-height: 1.8; } .form-field :is(input,select,textarea):focus { outline: 2px solid var(--primary); outline-offset: 2px; }
 .form-field small { font-size: 10px; color: var(--muted-foreground); font-weight: 400; } .form-actions { display: flex; justify-content: space-between; align-items: center; margin-top: 27px; gap: 12px; } .form-actions > button { height: 43px; font-size: 12px; }
