@@ -12,6 +12,7 @@
 ## Application architecture
 - Keep shared site navigation and footer in the root layout; public content pages use their own leaf routes and metadata so direct links remain accessible.
 - Define device categories, brands and faults in the shared client-safe catalogue; include a free-text alternative to avoid excluding unlisted manufacturers.
+- Keep visual model records in a shared client-safe catalogue keyed by category and brand, with stored asset pointers; the same model picker serves repair and buyback and permits unlisted models.
 - Repair and buyback use a shared three-step request form with shared Zod validation; submit via a public server function with insert-only RLS and no public request reads to protect contact details.
 - Use global semantic design tokens and Button variants for visual styling; imagery is imported from project assets for reliable delivery.
 - Keep business identity and contact links in a shared client-safe module so the header, homepage and footer stay consistent.
