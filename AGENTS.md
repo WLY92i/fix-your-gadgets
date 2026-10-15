@@ -8,3 +8,9 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+## Application architecture
+- Keep shared site navigation and footer in the root layout; public content pages use their own leaf routes and metadata so direct links remain accessible.
+- Define device categories, brands and faults in the shared client-safe catalogue; include a free-text alternative to avoid excluding unlisted manufacturers.
+- Repair and buyback use a shared three-step request form with shared Zod validation; submit via a public server function with insert-only RLS and no public request reads to protect contact details.
+- Use global semantic design tokens and Button variants for visual styling; imagery is imported from project assets for reliable delivery.
