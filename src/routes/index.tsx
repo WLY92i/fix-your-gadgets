@@ -1,10 +1,11 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
-import { ArrowRight, Wrench, ShieldCheck, LockKeyhole, Leaf, RotateCcw, Check } from 'lucide-react';
+import { ArrowRight, Wrench, ShieldCheck, LockKeyhole, Leaf, RotateCcw, Check, Phone, Mail, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { DeviceIcon } from '@/components/device-icon';
 import { deviceCategories } from '@/lib/device-catalog';
 import { pageMeta } from '@/lib/page-meta';
 import hero from '@/assets/repair-hero.jpg';
+import { business } from '@/lib/business-info';
 export const Route = createFileRoute('/')({ head: () => pageMeta('Réparation & reprises de vos appareils', 'Offrez une seconde vie à vos smartphones, tablettes, ordinateurs et consoles. Réparation et demandes de reprise toutes marques.'), component: Index });
 function Index() {
   return <main><section className="hero"><img className="hero-photo" src={hero} alt="Ordinateur portable, téléphone à l’écran cassé et manette sur un établi de réparation" width={1792} height={1024} fetchPriority="high" /><div className="container-site hero-inner"><div className="hero-copy"><div className="eyebrow"><span className="h-px w-6 bg-primary" />La réparation, tout simplement</div><h1>Réparation & reprises.<br />Une panne ?<br /><span>On lui redonne le sourire.</span></h1><p className="hero-description">Smartphones, tablettes, ordinateurs et consoles.<br />Réparez vos appareils ou offrez-leur une seconde vie, quelle que soit leur marque.</p><div className="hero-actions"><Button asChild variant="hero"><Link to="/reparation">Réparer mon appareil <ArrowRight /></Link></Button><Button asChild variant="heroOutline"><Link to="/reprises"><RotateCcw /> Faire reprendre un appareil</Link></Button></div><div className="hero-footnote"><Check size={12} />Toutes marques<span>·</span><Check size={12} />Diagnostic adapté à votre panne</div></div></div><div className="hero-index">RÉPARER, C’EST PRÉSERVER.</div></section>
