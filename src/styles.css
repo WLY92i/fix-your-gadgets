@@ -42,7 +42,7 @@
 .contact-address { margin-left: auto; }
 .site-header { position: relative; height: 90px; background: var(--background); border-bottom: 1px solid var(--border); }
 .header-inner { height: 100%; display: flex; align-items: center; gap: 22px; }
-.quality-logo { width: 108px; height: 58px; object-fit: contain; flex-shrink: 0; }
+.quality-logo { width: 148px; height: 79px; object-fit: contain; flex-shrink: 0; }
 .footer-contact { display: flex; flex-direction: column; gap: 6px; font-size: 11px; color: var(--muted-foreground); }
 .workshop-band { border-top: 1px solid var(--border); background: var(--muted); }
 .workshop-inner { display: grid; grid-template-columns: 1.2fr 1fr; gap: 55px; align-items: center; }
