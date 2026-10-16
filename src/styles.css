@@ -42,7 +42,7 @@
 .contact-address { margin-left: auto; }
 .site-header { position: relative; height: 90px; background: var(--background); border-bottom: 1px solid var(--border); }
 .header-inner { height: 100%; display: flex; align-items: center; gap: 22px; }
-.quality-logo { width: 108px; height: 58px; object-fit: contain; flex-shrink: 0; }
+.quality-logo { width: 148px; height: 79px; object-fit: contain; flex-shrink: 0; }
 .footer-contact { display: flex; flex-direction: column; gap: 6px; font-size: 11px; color: var(--muted-foreground); }
 .workshop-band { border-top: 1px solid var(--border); background: var(--muted); }
 .workshop-inner { display: grid; grid-template-columns: 1.2fr 1fr; gap: 55px; align-items: center; }
@@ -154,7 +154,7 @@
 @media (max-width: 640px) {
  .container-site { width: calc(100% - 36px); } .announcement { font-size: 9px; padding: 8px 10px; }
  .contact-bar-inner { gap: 5px 16px; min-height: 48px; justify-content: center; flex-wrap: wrap; padding-block: 8px; } .contact-bar a { font-size: 10px; gap: 5px; } .contact-address { display: none !important; }
- .site-header { height: 78px; } .brand-name { font-size: 18px; } .brand-symbol { width: 31px; height: 36px; } .brand-caption { font-size: 7px; } .quality-logo { width: 85px; height: 49px; } .workshop-inner { grid-template-columns: 1fr; gap: 25px; }
+ .site-header { height: 78px; } .brand-name { font-size: 18px; } .brand-symbol { width: 31px; height: 36px; } .brand-caption { font-size: 7px; } .quality-logo { width: 100px; height: 57px; } .workshop-inner { grid-template-columns: 1fr; gap: 25px; }
  .main-nav { display: none; } .main-nav.mobile-open { display: flex; flex-direction: column; align-items: stretch; position: absolute; top: 100%; left: 0; right: 0; z-index: 30; background: var(--background); padding: 15px 25px; gap: 0; border-bottom: 1px solid var(--border); box-shadow: var(--shadow-soft); } .main-nav a { padding: 14px 0; font-size: 13px; } .main-nav a.active::after { display: none; }
  .header-action { display: none; } .mobile-menu-trigger { display: inline-flex; width: 32px; padding: 0; flex-shrink: 0; margin-left: auto; } .header-inner { gap: 12px; }
  .hero { height: auto; padding-bottom: 132px; } .hero-photo { object-position: 66% bottom; height: 132px; inset: auto 0 0; object-fit: cover; } .hero::after { background: linear-gradient(180deg, var(--hero) 0%, var(--hero) 62%, color-mix(in oklch, var(--hero) 62%, transparent) 86%, transparent 100%); } .hero-inner { align-items: flex-start; padding-top: 26px; } .hero-copy { width: 100%; padding: 0; } .hero .eyebrow { font-size: 8px; letter-spacing: 1.2px; margin-bottom: 13px; } .hero h1 { font-size: 33px; margin-bottom: 12px; } .hero-description { font-size: 12px; line-height: 1.8; max-width: 310px; } .hero-actions { margin-top: 17px; gap: 9px; } .hero-actions a { height: 40px; font-size: 10px; padding-inline: 14px; } .hero-footnote { font-size: 8px; margin-top: 14px; } .hero-index { right: 20px; bottom: 14px; font-size: 8px; } .hero-picker { max-width: none; margin-top: 2px; gap: 9px; } .picker-card { padding: 11px 13px; gap: 12px; border-radius: 16px; } .picker-icon { width: 38px; height: 38px; border-radius: 11px; } .picker-icon svg { width: 19px; height: 19px; } .picker-card strong { font-size: 13px; } .picker-card > svg { width: 17px; height: 17px; }
