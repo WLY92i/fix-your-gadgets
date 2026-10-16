@@ -1,4 +1,5 @@
 # Roadmap
+- [x] Afficher le sélecteur d’appareils dans le bandeau d’accueil et retirer la grille de catégories en double.
 - [ ] Ajouter un catalogue de modèles avec photos et noms filtré par catégorie et marque.
 - [ ] Intégrer le choix visuel dans les deux formulaires avec recherche et modèle libre.
 - [ ] Tester la sélection et la conservation du modèle dans la suite de la demande.
