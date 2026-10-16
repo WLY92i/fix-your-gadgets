@@ -16,3 +16,4 @@
 - Repair and buyback use a shared three-step request form with shared Zod validation; submit via a public server function with insert-only RLS and no public request reads to protect contact details.
 - Use global semantic design tokens and Button variants for visual styling; imagery is imported from project assets for reliable delivery.
 - Keep business identity and contact links in a shared client-safe module so the header, homepage and footer stay consistent.
+- Keep the homepage device chooser as one shared component whose rows link to the repair page with a catalogue category id, and never repeat that chooser as a second category grid on the same page.
